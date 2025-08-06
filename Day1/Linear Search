@@ -1,0 +1,13 @@
+def linearSearch(list , val):
+    for i in range(len(list)):
+        if list[i] == val:
+            return i
+    return -1
+
+list = [22,3,5,7,26,9]
+val = 33
+res = linearSearch(list,val)
+if res != -1:
+    print('element found at the index',res)
+else:
+    print('element not found')
