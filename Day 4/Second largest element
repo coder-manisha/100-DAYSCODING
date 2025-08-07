@@ -1,0 +1,12 @@
+ l = [10,10,10,8,9,8,9,9,44,858,44]
+max = l[0]
+seco = None
+for i in range(len(l)):
+    if l[i]>max:
+        seco = max
+        max = l[i]
+    elif l[i]!=max :
+        seco = l[i]
+
+print('max value is',max)
+print('second _max value is',seco)
