@@ -1,0 +1,19 @@
+#inserting element without inbuilt
+
+def insert(list,index,value):
+    new_list = [0] *(len(list)+1)
+    for i in range((len(list)+1)):
+        if i < index :
+            new_list[i] = list[i]
+        elif i == index:
+            new_list[i] = value
+        else:
+            new_list[i] = list[i-1]
+    return new_list
+
+l = [22,3,4,2,1]
+index = int(input('enter the index value: '))
+value = int(input('enter value to be inserted: '))
+result = insert(l , index, value)
+print(f'New List after inserting a new element is {result}')
+
