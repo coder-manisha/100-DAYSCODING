@@ -1,0 +1,36 @@
+class Node:
+    def __init__(self,val):
+        self.val = val
+        self.next= None
+class Single:
+    def __init__(self):
+        self.root = None
+    def inseratbeg(self,val):
+        n = Node(val)
+        n.next = self.root
+        self.root = n
+        print("added",val)
+
+    def display(self):
+        temp = self.root
+        while temp:
+            print(temp.val , end=' ->')
+            temp =temp.next
+        print("None")
+    def print_reverse_stack(self):
+        stack = []
+        temp = self.root
+        while temp:
+            stack.append(temp.val)
+            temp = temp.next
+        while stack:
+            print(stack.pop(), end=' -> ')
+        print("None")
+
+
+s = Single()
+s.inseratbeg(67)
+s.inseratbeg(675)
+s.inseratbeg(676)
+s.print_reverse_stack()
+s.display()
